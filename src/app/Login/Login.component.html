@@ -1,0 +1,36 @@
+
+<body class="bg-gray-100">
+  <!-- Barra de navegación -->
+  <nav class="bg-red-500 text-white p-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-xl font-bold">Banco Santander</h1>
+      <ul class="flex space-x-4">
+        <li><a (click)="register()" class="hover:underline">Register</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Contenido principal -->
+  <form [formGroup]="loginForm" (ngSubmit)="logIn()">
+    <div class="container mx-auto mt-8">
+      <h2 class="text-2xl font-bold mb-4">Welcome to Banco Santander</h2>
+      <label class="text-2xl font-bold mb-4">Please Login to continue</label>
+      <div class="space-y-4">
+        <div>
+          <label class="block mb-2 text-sm text-gray-900 font-bold">User</label>
+          <input formControlName="user" type="number" class="bg-gray-50 border border-gray-300 text-gray-900 rounded p-0.5">
+        </div>
+        <div>
+          <label class="block mb-2 text-sm text-gray-900 font-bold">Password</label>
+          <input formControlName="pass" type="password" class="bg-gray-50 border border-gray-300 text-gray-900 rounded p-0.5">
+        </div>
+      </div>
+
+      <br>
+
+      <button class="block bg-red-500 text-white p-2 rounded text-sm font-bold hover:bg-red-800" type="submit">Log In</button>
+    </div>
+  </form>
+  <br>
+</body>
+

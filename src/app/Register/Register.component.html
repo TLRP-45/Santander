@@ -1,0 +1,56 @@
+<body>
+  <nav class="bg-red-500 text-white p-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-xl font-bold">Banco Santander</h1>
+    </div>
+  </nav>
+
+  <div class="container mx-auto mt-8">
+    <h2 class="text-2xl font-bold mb-4">Registrarse en Banco Santander</h2>
+    <form [formGroup]="registerForm" (ngSubmit)="register()">
+      <div class="space-y-4">
+        <div>
+          <label class="block mb-2 text-sm text-gray-900 font-bold">DNI</label>
+          <input formControlName="dni" type="number" class="bg-gray-50 border border-gray-300 text-gray-900 rounded p-0.5">
+          <div *ngIf="registerForm.get('dni')?.invalid && registerForm.get('dni')?.touched" class="text-red-600 text-sm">
+            The DNI is required and it must have between 8 and 15 characters.
+          </div>
+        </div>
+        <div>
+          <label class="block mb-2 text-sm text-gray-900 font-bold">Full Name</label>
+          <input formControlName="name" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 rounded p-0.5">
+          <div *ngIf="registerForm.get('name')?.invalid && registerForm.get('name')?.touched" class="text-red-600 text-sm">
+            The Name is required and it must have between 2 and 60 characters.
+          </div>
+        </div>
+        <div>
+          <label class="block mb-2 text-sm text-gray-900 font-bold">eMail</label>
+          <input formControlName="mail" type="email" class="bg-gray-50 border border-gray-300 text-gray-900 rounded p-0.5">
+          <div *ngIf="registerForm.get('mail')?.invalid && registerForm.get('mail')?.touched" class="text-red-600 text-sm">
+            Please insert a valid eMail account.
+          </div>
+        </div>
+        <div>
+          <label class="block mb-2 text-sm text-gray-900 font-bold">Phone Number</label>
+          <input formControlName="phone" type="number" class="bg-gray-50 border border-gray-300 text-gray-900 rounded p-0.5">
+          <div *ngIf="registerForm.get('phone')?.invalid && registerForm.get('phone')?.touched" class="text-red-600 text-sm">
+            The Phone Number is required and it must have 8 digits.
+          </div>
+        </div>
+        <div>
+          <label class="block mb-2 text-sm text-gray-900 font-bold">Password</label>
+          <input formControlName="password" type="password" class="bg-gray-50 border border-gray-300 text-gray-900 rounded p-0.5">
+          <div *ngIf="registerForm.get('password')?.invalid && registerForm.get('password')?.touched" class="text-red-600 text-sm">
+            The Password is required and it must have between 8 and 60 characters.
+          </div>
+        </div>
+      </div>
+
+      <br>
+
+      <button class="block bg-red-500 text-white p-2 rounded text-sm font-bold hover:bg-red-800" type="submit">Register</button>
+    </form>
+  </div>
+</body>
+
+
