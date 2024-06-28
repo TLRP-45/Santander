@@ -1,0 +1,97 @@
+#welcome {
+    text-align: center;
+}
+
+#rCard {
+    padding-left: 90%;
+}
+
+#card{
+    display: block;
+    margin: auto;
+    background: repeating-linear-gradient(0deg,rgba(236, 0, 0, 0.1) 1px,rgba(118, 0, 0, 0.2) 3px), linear-gradient(#760000,#ec0000);
+    position: relative; 
+    width: 500px;
+    height: 300px;
+    left: 0;
+    right: 0;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    border-radius: 25px;
+}
+
+#info{
+    display: block;
+    margin: auto;
+    margin-left: 37%;
+    margin-right: 23%;
+    position: relative;
+    left: 0;
+    right: 0;
+    font-weight: 700;
+}
+
+#bankImg {
+    display: block;
+    filter:brightness(100);
+    transform: scale(0.25);
+    position: absolute;
+    right: 42.5%;
+    top: -40%;
+}
+
+#bankNam {
+    display:block;
+    position: absolute;
+    color: white;
+    font-style: italic;
+    font-weight: bolder;
+    text-align: center;
+    font-size: 50px;
+    left: 150px;
+    top: 20px;
+}
+
+#bankCard {
+    display:block;
+    position: absolute;
+    color: white;
+    font-style: italic;
+    font-weight: 600;
+    text-align: center;
+    font-size: 25px;
+    left: 150px;
+    top: 82.5px;
+}
+
+#cardNum {
+    display:block;
+    position: relative;
+    color: white;
+    font-weight: bolder;
+    text-align: center;
+    font-size: 30px;
+    bottom: -162px;
+}
+
+#cardNam {
+    display:block;
+    position: relative;
+    color: white;
+    font-weight: bold;
+    left: 25px;
+    text-align: left;
+    font-size: 20px;
+    bottom: -205px;
+}
+
+#cardExDate {
+    display:block;
+    position: relative;
+    color: white;
+    font-weight: bold;
+    right: 150px;
+    text-align: right;
+    font-size: 15px;
+    bottom: -135px;
+}

@@ -11,7 +11,7 @@ export class ClientService {
   
 
   public clients: Client[] = [
-    //new Client ('usuario', 'password', 12345678, 'mymail@example.com', 909876543),
+    new Client ('usuario', 'password', 123456789, 'mymail@example.com', 909876543),
   ];
 
   public saveNewUser(regUser: CreateClientDto){

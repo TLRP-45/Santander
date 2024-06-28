@@ -8,7 +8,6 @@ import { RegisterComponent } from './Register/Register.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './Home/Home.component';
 import { BaseChartDirective } from 'ng2-charts';
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
@@ -21,7 +20,6 @@ import { MatButtonModule } from '@angular/material/button';
     LoginComponent,
     RegisterComponent,
     HomeComponent,
-    DashboardComponent,
    ],
   imports: [
     BrowserModule,

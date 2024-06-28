@@ -13,9 +13,10 @@ export class CardService {
   constructor() { }
 
   public createCard(dni: number, uname: string): Card {
-    var d: Date = new Date();
-    var exYear: number = d.getFullYear() + 5;
-    var nCard: Card = new Card (dni, Math.floor(Math.random() * 10000000), uname, Math.floor(Math.random() * 100), (new Date(exYear)))
+    let d: Date = new Date();
+    let exYear: number = d.getFullYear() + 5;
+    let exMonth: number = d.getMonth();
+    var nCard: Card = new Card (dni, Math.floor(Math.random() * 10000000000000000), uname, Math.floor(Math.random() * 100), (new Date(exYear, exMonth)))
     this.cardList.push(nCard)
     return nCard;
   }
