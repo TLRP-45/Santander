@@ -16,7 +16,7 @@ export class CardService {
     let d: Date = new Date();
     let exYear: number = d.getFullYear() + 5;
     let exMonth: number = d.getMonth();
-    var nCard: Card = new Card (dni, Math.floor(Math.random() * 10000000000000000), uname, Math.floor(Math.random() * 100), (new Date(exYear, exMonth)))
+    var nCard: Card = new Card (dni, Math.floor(Math.random() * 10000000000000000), uname, Math.floor(Math.random() * 1000), (new Date(exYear, exMonth)))
     this.cardList.push(nCard)
     return nCard;
   }

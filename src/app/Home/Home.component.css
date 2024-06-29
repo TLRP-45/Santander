@@ -90,8 +90,19 @@
     position: relative;
     color: white;
     font-weight: bold;
-    right: 150px;
+    right: 175px;
     text-align: right;
     font-size: 15px;
     bottom: -135px;
+}
+
+#cardCCV {
+    display:block;
+    position: relative;
+    color: white;
+    font-weight: bold;
+    right: 75px;
+    text-align: right;
+    font-size: 15px;
+    bottom: -113px;
 }

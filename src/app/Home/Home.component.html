@@ -15,20 +15,20 @@
       <h1 id="welcome" class="mat-h1 text-2xl font-bold mb-4">Welcome {{ name }}</h1>
     </div>
     <div class="grid-container mx-auto mt-2 mb-2 bg-white rounded-lg shadow-md p-4">
-      <h1 class="mat-h1">If you want a card please press the button</h1>
+      <h1 class="mat-h1">If you want a bank card please press the button</h1>
       <div id="rCard">
         <button class="block bg-red-500 text-white p-2 rounded text-sm font-bold hover:bg-red-800" (click)="requestNewCard()">Request card</button>
       </div>
     </div>
-    <mat-grid-list cols="2" rowHeight="350px">
-      <div  *ngFor="let card of userCardList">
+    <mat-grid-list cols="5" rowHeight="350px">
+      <div *ngFor="let card of userCardList">
         <div class="bg-white rounded-lg shadow-md p-4 mt-2 mb-2" >
           <mat-card-content class="dashboard-card-content">
             <div id="card">
               <img id="bankImg" src="../../assets/Santander.svg">
               <label id="bankNam">Santander</label>
               <label id="bankCard">Banking Card</label>
-              <span id="cardNum">{{card.cardNumber?.toString()?.substring(0, 4)}}-{{card.cardNumber?.toString()?.substring(4, 8)}}-{{card.cardNumber?.toString()?.substring(8, 12)}}-{{card.cardNumber?.toString()?.substring(12, 16)}}</span>
+              <span id="cardNum">{{card.cardNumber?.toString()?.substring(0, 4)}} - {{card.cardNumber?.toString()?.substring(4, 8)}} - {{card.cardNumber?.toString()?.substring(8, 12)}} - {{card.cardNumber?.toString()?.substring(12, 16)}}</span>
               <span id="cardNam">{{card.cardOwner?.toUpperCase()}}</span>
               <span id="cardExDate">VALID THRU: {{card.expirationDate?.toLocaleString("default", { month: "2-digit"})}}/{{card.expirationDate?.toLocaleString("default", { year: "2-digit"})}}</span>
               <span id="cardCCV">CCV: {{card.ccv}}</span>
